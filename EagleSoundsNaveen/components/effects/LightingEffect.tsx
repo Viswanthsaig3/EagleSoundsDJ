@@ -3,9 +3,19 @@
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 
+// Define an interface for flash objects
+interface Flash {
+  id: number;
+  x: number;
+  y: number;
+  size: number;
+  opacity: number;
+}
+
 const LightingEffect = () => {
   const [isActive, setIsActive] = useState(false);
-  const [flashes, setFlashes] = useState([]);
+  // Properly type the flashes state
+  const [flashes, setFlashes] = useState<Flash[]>([]);
   
   useEffect(() => {
     setIsActive(true);
@@ -13,7 +23,7 @@ const LightingEffect = () => {
     // Create random camera flashes instead of full-screen strobe
     const interval = setInterval(() => {
       // Create a new flash with random position
-      const newFlash = {
+      const newFlash: Flash = {
         id: Date.now(),
         x: Math.random() * 80 + 10, // 10% to 90% of screen width
         y: Math.random() * 80 + 10, // 10% to 90% of screen height
