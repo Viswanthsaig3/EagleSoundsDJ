@@ -5,6 +5,13 @@ import { motion } from 'framer-motion';
 import { FaStar, FaHeart, FaMusic, FaBolt, FaSnowflake } from 'react-icons/fa';
 import { GiPartyPopper, GiDiamonds, GiSparkles } from 'react-icons/gi';
 
+// Define a type for the confetti shapes
+type ConfettiShapeType = {
+  component: React.ElementType | string;
+  className?: string;
+  style?: React.CSSProperties;
+};
+
 const ConfettiEffect = () => {
   const [isActive, setIsActive] = useState(false);
   
@@ -25,7 +32,7 @@ const ConfettiEffect = () => {
   ];
 
   // Array of confetti shape components
-  const confettiShapes = [
+  const confettiShapes: ConfettiShapeType[] = [
     { component: FaStar },
     { component: FaHeart },
     { component: FaBolt },
@@ -72,7 +79,7 @@ const ConfettiEffect = () => {
   ];
   
   // Function to render confetti piece based on shape
-  const renderConfettiPiece = (shape, color, size, key) => {
+  const renderConfettiPiece = (shape: ConfettiShapeType, color: string, size: number, key: string | number) => {
     const ShapeComponent = shape.component;
     
     if (typeof ShapeComponent === 'string') {
