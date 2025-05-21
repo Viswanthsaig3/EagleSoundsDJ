@@ -1,0 +1,209 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 240, 249, 255;
+  --background-rgb: 15, 23, 42;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-rgb));
+  overflow-x: hidden;
+  background-image: 
+    radial-gradient(circle at 25px 25px, rgba(0, 191, 255, 0.15) 2%, transparent 0%), 
+    radial-gradient(circle at 75px 75px, rgba(0, 191, 255, 0.1) 2%, transparent 0%);
+  background-size: 100px 100px;
+}
+
+/* Audio wave animation */
+@keyframes audioWave {
+  0% { height: 3px; }
+  50% { height: 20px; }
+  100% { height: 3px; }
+}
+
+/* Add placeholder background classes */
+.placeholder-bg {
+  @apply relative flex items-center justify-center overflow-hidden;
+  background: linear-gradient(135deg, #f0f9ff 0%, #e1f5fe 50%, #b3e5fc 100%);
+}
+
+.placeholder-bg-dark {
+  @apply relative flex items-center justify-center overflow-hidden;
+  background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 50%, #2563eb 100%);
+}
+
+.placeholder-bg-stripe {
+  background: repeating-linear-gradient(
+    45deg,
+    #e1f5fe,
+    #e1f5fe 10px,
+    #b3e5fc 10px,
+    #b3e5fc 20px
+  );
+}
+
+/* Hero placeholder backgrounds */
+.hero-placeholder {
+  @apply relative flex items-center justify-center overflow-hidden text-blue-900 font-bold text-xl;
+  background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 50%, #93c5fd 100%);
+}
+
+/* Enhanced section backgrounds */
+.section-gradient {
+  @apply bg-gradient-to-b from-primary/5 to-darker;
+}
+
+.section-dark {
+  @apply bg-dark;
+}
+
+/* Card styles for vendor page */
+.dark-card {
+  @apply bg-gradient-to-br from-darker to-dark p-6 rounded-xl shadow-md 
+  transition-all duration-300 hover:-translate-y-2 hover:shadow-neon-blue border border-blue-900/20;
+}
+
+/* Existing styles */
+::selection {
+  background-color: rgba(0, 191, 255, 0.3);
+  color: #ffffff;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0F172A;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #00BFFF;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #0047AB;
+}
+
+@layer components {
+  .container-custom {
+    @apply container mx-auto px-4 md:px-8 max-w-7xl;
+  }
+  
+  .section-padding {
+    @apply py-12 md:py-20;
+  }
+  
+  .heading-xl {
+    @apply text-3xl md:text-4xl lg:text-5xl font-display font-bold;
+  }
+  
+  .heading-lg {
+    @apply text-2xl md:text-3xl lg:text-4xl font-display font-bold;
+  }
+  
+  .heading-md {
+    @apply text-xl md:text-2xl lg:text-3xl font-display font-semibold;
+  }
+  
+  .heading-sm {
+    @apply text-lg md:text-xl font-display font-semibold;
+  }
+  
+  .btn-primary {
+    @apply bg-primary text-darker px-6 py-3 rounded-md font-medium inline-block 
+    transition-all duration-300 hover:bg-opacity-90 hover:-translate-y-1 shadow-md hover:shadow-neon-blue
+    relative overflow-hidden z-10 before:absolute before:inset-0 before:bg-accent before:opacity-0 
+    before:transition-opacity before:duration-300 hover:before:opacity-30 before:-z-10;
+  }
+  
+  .btn-secondary {
+    @apply bg-secondary text-light px-6 py-3 rounded-md font-medium inline-block 
+    transition-all duration-300 hover:bg-opacity-90 hover:-translate-y-1 shadow-md
+    relative overflow-hidden z-10 before:absolute before:inset-0 before:bg-blue-400 before:opacity-0 
+    before:transition-opacity before:duration-300 hover:before:opacity-20 before:-z-10;
+  }
+  
+  .service-card {
+    @apply bg-gradient-to-br from-darker to-dark p-6 rounded-lg shadow-md 
+    transition-all duration-300 hover:-translate-y-2 hover:shadow-neon-blue border border-blue-900/20;
+  }
+  
+  .navbar-link {
+    @apply relative text-light font-medium transition-colors duration-300 hover:text-primary 
+    after:absolute after:left-0 after:bottom-0 after:h-0.5 after:w-0 after:bg-primary 
+    after:transition-all after:duration-300 hover:after:w-full;
+  }
+  
+  .glow-text {
+    @apply animate-glow text-primary;
+  }
+  
+  .float-element {
+    @apply animate-float;
+  }
+  
+  .hero-gradient-bg {
+    @apply bg-gradient-to-br from-darker via-dark to-blue-900;
+  }
+  
+  .blue-gradient-bg {
+    @apply bg-gradient-to-r from-primary to-secondary;
+  }
+  
+  .shimmer {
+    @apply relative overflow-hidden before:absolute before:inset-0 before:bg-gradient-to-r 
+    before:from-transparent before:via-white/10 before:to-transparent before:animate-shimmer;
+  }
+  
+  .glass-effect {
+    @apply bg-blue-900/10 backdrop-blur-lg border border-blue-500/20 shadow-lg;
+  }
+  
+  .emphasis-text {
+    @apply text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent;
+  }
+  
+  .neon-border {
+    @apply border border-primary/50 shadow-neon-blue;
+  }
+  
+  .dark-card {
+    @apply bg-darker rounded-lg border border-blue-900/30 p-6 shadow-lg hover:shadow-neon-blue 
+    transition-all duration-300 hover:-translate-y-1;
+  }
+  
+  .glow-hover {
+    @apply transition-all duration-300 hover:text-primary hover:shadow-neon-blue;
+  }
+  
+  .section-dark {
+    @apply bg-darker text-light border-t border-blue-900/20;
+  }
+  
+  .section-gradient {
+    @apply bg-gradient-to-b from-darker to-dark text-light;
+  }
+
+  /* Custom animations for the vendor page */
+  .hover-lift {
+    @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-lg;
+  }
+  
+  .card-shine {
+    @apply before:absolute before:inset-0 before:bg-gradient-to-r 
+    before:from-transparent before:via-white/5 before:to-transparent before:-skew-x-12
+    before:opacity-0 hover:before:opacity-100 before:transition-opacity before:duration-700;
+  }
+}
