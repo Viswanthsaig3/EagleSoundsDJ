@@ -21,7 +21,6 @@ export default function PlaceholderImage({
   priority = false,
 }: PlaceholderImageProps) {
   const [isError, setIsError] = React.useState(false);
-  const placeholderText = alt.split(' ')[0] || 'Image';
 
   return (
     <div className={`relative ${fill ? 'h-full w-full' : ''}`}>
@@ -39,14 +38,7 @@ export default function PlaceholderImage({
           // placeholder="blur" 
           // blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
         />
-      ) : (
-        <div 
-          className={`placeholder-bg shimmer ${className}`} // Added shimmer class
-          style={!fill ? { width: width, height: height } : { position: 'absolute', inset: 0 }}
-        >
-          {placeholderText}
-        </div>
-      )}
+      ) : null}
     </div>
   );
 }

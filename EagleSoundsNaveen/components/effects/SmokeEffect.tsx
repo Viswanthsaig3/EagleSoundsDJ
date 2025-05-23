@@ -32,9 +32,9 @@ const SmokeEffect = () => {
       opacity: number;
       fadeRate: number;
       
-      constructor() {
-        this.x = Math.random() * canvas.width;
-        this.y = canvas.height + Math.random() * 100;
+      constructor(canvasWidth: number, canvasHeight: number) {
+        this.x = Math.random() * canvasWidth;
+        this.y = canvasHeight + Math.random() * 100;
         this.size = Math.random() * 100 + 50;
         this.speedX = (Math.random() - 0.5) * 1.5;
         this.speedY = -Math.random() * 3 - 1;
@@ -77,7 +77,7 @@ const SmokeEffect = () => {
     
     // Generate initial particles
     for (let i = 0; i < 15; i++) {
-      particles.push(new SmokeParticle());
+      particles.push(new SmokeParticle(canvas.width, canvas.height));
     }
     
     const animate = () => {
@@ -85,7 +85,7 @@ const SmokeEffect = () => {
       
       // Add new particles at a controlled rate
       if (Math.random() < 0.1) {
-        particles.push(new SmokeParticle());
+        particles.push(new SmokeParticle(canvas.width, canvas.height));
       }
       
       for (let i = 0; i < particles.length; i++) {

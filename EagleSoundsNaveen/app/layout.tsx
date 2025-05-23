@@ -41,7 +41,6 @@ export const metadata: Metadata = {
     ],
     locale: 'en_IN',
     type: 'website',
-    contactEmail: 'Naveencandc4689@gmail.com',
   },
   twitter: {
     card: 'summary_large_image',

@@ -51,39 +51,68 @@ export default function Home() {
     triggerOnce: true,
   });
 
-  // Carousel items for hero section
+  // Enhanced carousel items for hero section
   const carouselItems = [
     {
       id: 1,
-      title: 'Premium DJ Services',
-      subtitle: 'Creating unforgettable experiences for every event',
-      buttonText: 'Explore DJ Services',
+      title: 'Premium DJ Experiences',
+      subtitle: 'Where Music Meets Magic',
+      description: 'Transform your events with our state-of-the-art sound systems and professional DJs who create unforgettable musical journeys tailored to your celebration.',
+      buttonText: 'Book Your DJ',
       buttonLink: '/vendor#dj',
-      effectType: 'music' as const
+      secondaryButtonText: 'Listen to Mixes',
+      secondaryButtonLink: '/about#gallery',
+      effectType: 'music' as const,
+      stats: [
+        { value: '500+', label: 'Events' },
+        { value: '10+', label: 'Years' },
+        { value: '100%', label: 'Satisfaction' }
+      ]
     },
     {
       id: 2,
-      title: 'Professional Photography',
-      subtitle: 'Capturing your precious moments perfectly',
-      buttonText: 'Discover Photography',
+      title: 'Cinematic Photography',
+      subtitle: 'Capturing Moments, Creating Memories',
+      description: 'Professional photography services that freeze your precious moments in time with artistic vision and technical excellence.',
+      buttonText: 'View Portfolio',
       buttonLink: '/vendor#photos',
-      effectType: 'light' as const
+      secondaryButtonText: 'Contact Photographer',
+      secondaryButtonLink: '/contact',
+      effectType: 'light' as const,
+      stats: [
+        { value: '1000+', label: 'Photos Captured' },
+        { value: '50+', label: 'Happy Couples' }
+      ]
     },
     {
       id: 3,
       title: 'Atmospheric Smoke Effects',
-      subtitle: 'Add drama and excitement to your events',
-      buttonText: 'See Smoke Effects',
+      subtitle: 'Drama That Takes Your Breath Away',
+      description: 'Create stunning visual effects and dramatic atmospheres with our professional-grade smoke machines and lighting combinations.',
+      buttonText: 'See Effects',
       buttonLink: '/vendor#smoke',
-      effectType: 'smoke' as const
+      secondaryButtonText: 'Learn More',
+      secondaryButtonLink: '/about',
+      effectType: 'smoke' as const,
+      stats: [
+        { value: '200+', label: 'Stunning Effects' },
+        { value: '24/7', label: 'Support' }
+      ]
     },
     {
       id: 4,
       title: 'Complete Event Solutions',
-      subtitle: 'Everything you need for a perfect celebration',
-      buttonText: 'View All Services',
+      subtitle: 'Your Vision, Our Expertise',
+      description: 'From intimate gatherings to grand celebrations, we provide comprehensive event services that bring your dreams to life with precision and creativity.',
+      buttonText: 'Explore All Services',
       buttonLink: '/vendor',
-      effectType: 'confetti' as const
+      secondaryButtonText: 'Get Quote',
+      secondaryButtonLink: '/contact',
+      effectType: 'confetti' as const,
+      stats: [
+        { value: 'All-in-One', label: 'Solutions' },
+        { value: 'Custom', label: 'Packages' }
+      ]
     },
   ];
 
