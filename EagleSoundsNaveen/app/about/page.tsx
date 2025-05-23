@@ -470,7 +470,7 @@ export default function AboutPage() {
         <div className="container-custom text-center relative z-10">
           <h2 className="heading-lg mb-6 text-white">Ready to <span className="emphasis-text">Collaborate</span>?</h2>
           <p className="text-blue-100/80 max-w-2xl mx-auto mb-8">
-            Get in touch with us to discuss your requirements and how we can make your event special.
+            Get in touch with us at <a href="mailto:Naveencandc4689@gmail.com" className="text-primary hover:underline">Naveencandc4689@gmail.com</a> to discuss your requirements and how we can make your event special.
           </p>
           <Link href="/contact" className="btn-primary">
             Contact Us Now

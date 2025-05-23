@@ -144,27 +144,32 @@ const Footer = () => {
               <ul className="space-y-4">
                 <li>
                   <a 
-                    href="mailto:info@eaglesounds.in" 
+                    href="mailto:Naveencandc4689@gmail.com" 
                     className="text-blue-100/70 hover:text-primary transition-colors flex items-start"
                   >
                     <FaEnvelope className="mr-3 mt-1 text-primary" />
-                    <span>info@eaglesounds.in</span>
+                    <span>Naveencandc4689@gmail.com</span>
                   </a>
                 </li>
                 <li>
                   <a 
-                    href="tel:+919876543210" 
+                    href="tel:+918121525235" 
                     className="text-blue-100/70 hover:text-primary transition-colors flex items-start"
                   >
                     <FaPhone className="mr-3 mt-1 text-primary" />
-                    <span>+91 98765 43210</span>
+                    <span>+91 8121525235</span>
                   </a>
                 </li>
                 <li className="flex items-start">
                   <FaMapMarkerAlt className="mr-3 mt-1 text-primary flex-shrink-0" />
-                  <span className="text-blue-100/70">
-                    Hyderabad, Telangana, India
-                  </span>
+                  <a 
+                    href="https://www.google.com/maps?q=16.222400,80.517117" 
+                    className="text-blue-100/70 hover:text-primary transition-colors"
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                  >
+                    <span>Guntur, Andhra Pradesh, India</span>
+                  </a>
                 </li>
               </ul>
             </div>

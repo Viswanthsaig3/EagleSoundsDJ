@@ -93,8 +93,8 @@ Example local business schema:
   },
   "geo": {
     "@type": "GeoCoordinates",
-    "latitude": XX.XXXXX,
-    "longitude": XX.XXXXX
+    "latitude": 16.222400,
+    "longitude": 80.517117
   },
   "priceRange": "₹₹-₹₹₹",
   "openingHoursSpecification": {
@@ -110,6 +110,7 @@ Example local business schema:
     "opens": "10:00",
     "closes": "18:00"
   },
+  "email": "Naveencandc4689@gmail.com",
   "sameAs": [
     "https://www.instagram.com/eagle__sounds/",
     "https://www.youtube.com/@eagledjsounds",

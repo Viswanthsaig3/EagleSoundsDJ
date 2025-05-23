@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     title: 'Eagle Sounds - Premium DJ & Event Services',
     description: 'Professional DJ services, lighting, photography, smoke effects and event management for all types of celebrations.',
     url: 'https://eaglesounds.com',
-    siteName: 'Eagle Sounds',
+    siteName: 'Eagle Sounds DJ',
     images: [
       {
         url: 'https://eaglesounds.com/og-image.jpg',
@@ -39,8 +39,9 @@ export const metadata: Metadata = {
         alt: 'Eagle Sounds - Premium Event Services'
       }
     ],
-    locale: 'en_US',
+    locale: 'en_IN',
     type: 'website',
+    contactEmail: 'Naveencandc4689@gmail.com',
   },
   twitter: {
     card: 'summary_large_image',

@@ -234,8 +234,8 @@ export default function ContactPage() {
                   <div>
                     <h3 className="font-display font-semibold mb-1 text-white">Email</h3>
                     <p className="text-blue-100/70 mb-1">Send us an email:</p>
-                    <a href="mailto:info@eaglesounds.com" className="text-primary hover:text-accent transition-colors">
-                      info@eaglesounds.com
+                    <a href="mailto:Naveencandc4689@gmail.com" className="text-primary hover:text-accent transition-colors">
+                      Naveencandc4689@gmail.com
                     </a>
                   </div>
                 </motion.div>
