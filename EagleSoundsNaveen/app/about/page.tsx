@@ -35,17 +35,11 @@ const stats = [
   },
 ];
 
-// Gallery data
+// Gallery data - Remove unused gallery images data since they're not displayed
+// and might be causing issues with missing files
 const galleryImages = [
+  // Reduced to just what's needed
   { id: 1, src: '/gallery1.jpg', alt: 'DJ event with colorful lighting', category: 'DJ' },
-  { id: 2, src: '/gallery2.jpg', alt: 'Wedding ceremony with elegant decorations', category: 'Wedding' },
-  { id: 3, src: '/gallery3.jpg', alt: 'College event with large crowd', category: 'College' },
-  { id: 4, src: '/gallery4.jpg', alt: 'Birthday party with colorful decorations', category: 'Birthday' },
-  { id: 5, src: '/gallery5.jpg', alt: 'Corporate event with professional setup', category: 'Corporate' },
-  { id: 6, src: '/gallery6.jpg', alt: 'Festival celebration with vibrant lighting', category: 'Festival' },
-  { id: 7, src: '/gallery7.jpg', alt: 'Photo shoot session', category: 'Photo' },
-  { id: 8, src: '/gallery8.jpg', alt: 'Lighting setup for outdoor event', category: 'Lighting' },
-  { id: 9, src: '/gallery9.jpg', alt: 'Roadshow with sound system', category: 'Roadshow' },
 ];
 
 // Team data

@@ -252,7 +252,7 @@ export default function ContactPage() {
                     <h3 className="font-display font-semibold mb-1 text-white">Location</h3>
                     <p className="text-blue-100/70 mb-1">Find us on the map:</p>
                     <a 
-                      href="https://goo.gl/maps/eaglesounds" 
+                      href="https://www.google.com/maps?q=16.222400,80.517117" 
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-blue-500 hover:text-blue-400 transition-colors"

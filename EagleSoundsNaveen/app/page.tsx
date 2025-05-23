@@ -8,7 +8,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { FaMusic, FaLightbulb, FaCamera, FaSmog, FaInstagram, FaYoutube, FaWhatsapp, FaFacebook } from 'react-icons/fa';
 
-// Service data with smoke machine added
+// Service data - Update to ensure all images exist
 const services = [
   {
     id: 1,
@@ -16,7 +16,7 @@ const services = [
     description: 'Our professional DJ services cater to various events with high-quality sound systems and experienced DJs who know how to keep your crowd energized.',
     icon: <FaMusic className="text-primary text-3xl" />,
     link: '/vendor#dj',
-    image: '/dj-service.jpg',
+    image: '/dj-service.jpg', // Ensure this file exists
   },
   {
     id: 2,

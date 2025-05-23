@@ -67,17 +67,10 @@ export default function RootLayout({
     <html lang="en" className={`${inter.variable} ${montserrat.variable}`}>
       <head>
         <meta name="theme-color" content="#020617" />
-        <link rel="icon" href="/logo.png" />
+        <link rel="icon" href="/logo.png" type="image/png" sizes="any" />
         
-        {/* Preload key routes for faster navigation */}
-        <link rel="preload" href="/" as="fetch" crossOrigin="anonymous" />
-        <link rel="preload" href="/vendor" as="fetch" crossOrigin="anonymous" />
-        <link rel="preload" href="/about" as="fetch" crossOrigin="anonymous" />
-        <link rel="preload" href="/contact" as="fetch" crossOrigin="anonymous" />
-        
-        {/* Preload critical assets */}
+        {/* Only preload critical assets */}
         <link rel="preload" href="/logo.png" as="image" />
-        <link rel="preload" href="/hero1.jpg" as="image" />
       </head>
       <body className={`${inter.className} bg-darker text-white min-h-screen flex flex-col`}>
         <Navbar />
