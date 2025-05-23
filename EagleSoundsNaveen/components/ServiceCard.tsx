@@ -14,7 +14,7 @@ interface ServiceCardProps {
 
 export default function ServiceCard({ title, description, icon, link }: ServiceCardProps) {
   return (
-    <div className="service-card group relative">
+    <div className="service-card group relative h-full flex flex-col">
       <div className="mb-4 flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 shadow-neon-blue/20">
         {icon}
       </div>
@@ -23,15 +23,15 @@ export default function ServiceCard({ title, description, icon, link }: ServiceC
         {title}
       </h3>
       
-      <p className="text-blue-100/70 mb-4">
+      <p className="text-blue-100/70 mb-4 flex-grow">
         {description}
       </p>
       
       <Link 
         href={link}
-        className="inline-flex items-center font-medium text-primary hover:text-accent transition-colors"
+        className="inline-flex items-center font-medium text-primary hover:text-accent transition-colors w-full sm:w-auto"
       >
-        Learn More
+        <span>Learn More</span>
         <motion.span 
           className="ml-2"
           initial={{ x: 0 }}
@@ -45,4 +45,4 @@ export default function ServiceCard({ title, description, icon, link }: ServiceC
       <div className="absolute -inset-1 bg-gradient-to-r from-primary/20 to-accent/20 rounded-lg blur opacity-0 group-hover:opacity-30 transition-all duration-500 -z-10"></div>
     </div>
   );
-} 
+}

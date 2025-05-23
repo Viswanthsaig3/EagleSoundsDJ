@@ -22,7 +22,7 @@ export default function CardHighlight({ children }: CardHighlightProps) {
 
   return (
     <motion.div
-      className="relative rounded-xl overflow-hidden bg-gradient-to-br from-darker to-dark border border-blue-900/20 hover:border-primary/30 transition-all duration-300 shadow-lg"
+      className="relative rounded-xl overflow-hidden bg-gradient-to-br from-darker to-dark border border-blue-900/20 hover:border-primary/30 transition-all duration-300 shadow-lg h-full flex flex-col"
       onMouseMove={handleMouseMove}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
@@ -55,7 +55,7 @@ export default function CardHighlight({ children }: CardHighlightProps) {
         />
       )}
       
-      <div className="relative z-10">
+      <div className="relative z-10 flex flex-col h-full p-4 sm:p-6">
         {children}
       </div>
       

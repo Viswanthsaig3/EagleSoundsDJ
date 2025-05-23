@@ -31,7 +31,7 @@ module.exports = {
       animation: {
         glow: 'glow 2s ease-in-out infinite alternate',
         float: 'float 6s ease-in-out infinite',
-        shimmer: 'shimmer 1.5s linear infinite',
+        shimmer: 'shimmer 1.5s linear infinite', // This animation is used
       },
       keyframes: {
         glow: {
@@ -42,7 +42,7 @@ module.exports = {
           '0%, 100%': { transform: 'translateY(0)' },
           '50%': { transform: 'translateY(-10px)' },
         },
-        shimmer: {
+        shimmer: { // This keyframe is used
           '0%': { transform: 'translateX(-100%)' },
           '100%': { transform: 'translateX(100%)' },
         },

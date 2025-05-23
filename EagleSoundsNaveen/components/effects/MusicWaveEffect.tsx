@@ -107,7 +107,7 @@ const MusicWaveEffect = () => {
               top: Math.random() * 100 + '%',
               backgroundColor: Math.random() > 0.5 ? '#3b82f6' : '#10b981',
               opacity: 0.6,
-            }}
+            } as React.CSSProperties}
             animate={{
               y: [0, -100 - Math.random() * 100],
               x: [0, (Math.random() - 0.5) * 50],
@@ -139,7 +139,7 @@ const MusicWaveEffect = () => {
           width: '300px',
           height: '300px',
           filter: 'blur(40px)'
-        }}
+        } as React.CSSProperties}
       />
     </div>
   );

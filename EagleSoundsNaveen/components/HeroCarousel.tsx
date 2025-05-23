@@ -33,6 +33,13 @@ const HeroCarousel = ({ items, autoPlayInterval = 7000 }: HeroCarouselProps) => 
   const autoPlayRef = useRef<NodeJS.Timeout | null>(null);
   const currentItem = items[currentIndex];
 
+  // Define fadeAnimation object for use in motion components
+  const fadeAnimation = {
+    initial: { opacity: 0, y: 20 },
+    animate: { opacity: 1, y: 0 },
+    transition: { duration: 0.5 }
+  };
+
   const startAutoPlay = () => {
     stopAutoPlay();
     autoPlayRef.current = setInterval(() => {
@@ -90,118 +97,73 @@ const HeroCarousel = ({ items, autoPlayInterval = 7000 }: HeroCarouselProps) => 
   };
 
   return (
-    <div className="relative w-full h-full overflow-hidden">
-      {/* Carousel items */}
-      <AnimatePresence initial={false} mode="wait" onExitComplete={() => setIsAnimating(false)}>
-        <motion.div
-          key={currentIndex}
-          className="absolute inset-0"
-          initial={{ opacity: 0, scale: 1.05 }}
-          animate={{ opacity: 1, scale: 1 }}
-          exit={{ opacity: 0, scale: 0.95 }}
-          transition={{ duration: 1, ease: "easeInOut" }}
-          onAnimationStart={() => setIsAnimating(true)}
-          onAnimationComplete={() => setIsAnimating(false)}
+    <div className="relative h-full overflow-hidden bg-darker">
+      {/* Overlay effects */}
+      <div className="absolute inset-0 bg-gradient-to-b from-darker via-transparent to-darker z-10"></div>
+      
+      {currentItem.effectType && renderEffect()}
+      
+      <div className="relative z-20 h-full flex flex-col justify-center items-center text-center px-4 sm:px-8">
+        <motion.h1 
+          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-3 sm:mb-4"
+          {...fadeAnimation}
         >
-          {/* Background Image */}
-          <div className="absolute inset-0">
-            {currentItem.image ? (
-              <Image
-                src={currentItem.image}
-                alt={currentItem.title}
-                fill
-                priority
-                quality={90}
-                className="object-cover"
-              />
-            ) : (
-              // Add a gradient background when no image is provided
-              <div className="absolute inset-0 bg-gradient-to-br from-darker via-dark to-blue-900"></div>
-            )}
-            <div className="absolute inset-0 bg-gradient-to-t from-darker via-darker/70 to-darker/30 z-10"></div>
-          
-            {/* Special Effect Layer */}
-            {renderEffect()}
-          </div>
-
-          {/* Content */}
-          <div className="absolute inset-0 flex items-center justify-center z-20">
-            <div className="container-custom flex flex-col items-center justify-center text-center">
-              <motion.span 
-                className="inline-block px-4 py-1 bg-primary/20 backdrop-blur-sm text-primary rounded-full mb-4 text-sm font-medium border border-primary/30"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.2, duration: 0.5 }}
-              >
-                Eagle Sounds
-              </motion.span>
-              
-              <motion.h1
-                className="text-4xl md:text-5xl lg:text-7xl font-bold text-white mb-4 max-w-4xl relative z-30"
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.4, duration: 0.6 }}
-              >
-                {currentItem.title}
-              </motion.h1>
-              
-              <motion.p
-                className="text-lg md:text-xl text-white/80 mb-8 max-w-2xl relative z-30"
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.6, duration: 0.6 }}
-              >
-                {currentItem.subtitle}
-              </motion.p>
-              
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.8, duration: 0.6 }}
-                className="relative z-30"
-              >
-                <Link 
-                  href={currentItem.buttonLink} 
-                  className="btn-primary hover:scale-105 transition-transform duration-300"
-                >
-                  {currentItem.buttonText}
-                </Link>
-              </motion.div>
-            </div>
-          </div>
+          {currentItem.title}
+        </motion.h1>
+        
+        <motion.p 
+          className="text-lg sm:text-xl text-blue-100/90 max-w-3xl mb-6 sm:mb-8 px-4"
+          {...fadeAnimation}
+          transition={{ ...fadeAnimation.transition, delay: 0.1 }}
+        >
+          {currentItem.subtitle}
+        </motion.p>
+        
+        <motion.div
+          {...fadeAnimation}
+          transition={{ ...fadeAnimation.transition, delay: 0.2 }}
+        >
+          <Link 
+            href={currentItem.buttonLink}
+            className="btn-primary text-base sm:text-lg px-6 py-3 sm:px-8 sm:py-4"
+          >
+            {currentItem.buttonText}
+          </Link>
         </motion.div>
-      </AnimatePresence>
-
-      {/* Controls */}
-      <div className="absolute z-30 bottom-10 left-0 right-0 flex justify-center items-center space-x-3">
+      </div>
+      
+      {/* Navigation arrows - made more responsive */}
+      <div className="absolute z-30 flex justify-between items-center w-full top-1/2 -translate-y-1/2 px-2 sm:px-4 md:px-8">
+        <button 
+          onClick={prevSlide} 
+          className="bg-primary/20 backdrop-blur-sm hover:bg-primary/40 p-2 sm:p-3 rounded-full transform -translate-x-1 sm:translate-x-0 transition-all duration-300"
+          aria-label="Previous slide"
+        >
+          <FaChevronLeft className="text-white text-xl sm:text-2xl" />
+        </button>
+        
+        <button 
+          onClick={nextSlide} 
+          className="bg-primary/20 backdrop-blur-sm hover:bg-primary/40 p-2 sm:p-3 rounded-full transform translate-x-1 sm:translate-x-0 transition-all duration-300"
+          aria-label="Next slide"
+        >
+          <FaChevronRight className="text-white text-xl sm:text-2xl" />
+        </button>
+      </div>
+      
+      {/* Pagination dots - made more responsive */}
+      <div className="absolute bottom-4 sm:bottom-8 left-0 right-0 z-30 flex justify-center">
         {items.map((_, index) => (
           <button
             key={index}
-            className={`w-3 h-3 rounded-full transition-all duration-300 ${
-              index === currentIndex ? 'bg-primary w-8' : 'bg-white/50'
+            onClick={() => setCurrentIndex(index)}
+            className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full mx-1 sm:mx-2 transition-all duration-300 ${
+              index === currentIndex ? 'bg-primary scale-125' : 'bg-white/50'
             }`}
-            onClick={() => goToSlide(index)}
             aria-label={`Go to slide ${index + 1}`}
           />
         ))}
       </div>
-
-      {/* Navigation Arrows */}
-      <button
-        className="absolute z-30 left-5 top-1/2 -translate-y-1/2 bg-black/30 hover:bg-primary/80 rounded-full p-3 text-white transition-all duration-300"
-        onClick={prevSlide}
-        aria-label="Previous slide"
-      >
-        <FaChevronLeft size={20} />
-      </button>
-      
-      <button
-        className="absolute z-30 right-5 top-1/2 -translate-y-1/2 bg-black/30 hover:bg-primary/80 rounded-full p-3 text-white transition-all duration-300"
-        onClick={nextSlide}
-        aria-label="Next slide"
-      >
-        <FaChevronRight size={20} />
-      </button>
     </div>
   );
 };

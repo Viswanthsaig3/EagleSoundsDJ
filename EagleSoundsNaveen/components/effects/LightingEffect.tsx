@@ -51,7 +51,7 @@ const LightingEffect = () => {
         {/* Light beam 1 - from top left */}
         <motion.div 
           className="absolute -top-20 -left-20 w-40 h-[150vh] bg-blue-400/30 rounded-full rotate-45 origin-top-left"
-          style={{ filter: 'blur(20px)' }}
+          style={{ filter: 'blur(20px)' } as React.CSSProperties}
           animate={{
             opacity: [0.3, 0.6, 0.3],
             rotate: [45, 55, 45]
@@ -66,7 +66,7 @@ const LightingEffect = () => {
         {/* Light beam 2 - from top right */}
         <motion.div 
           className="absolute -top-20 -right-20 w-40 h-[150vh] bg-purple-400/30 rounded-full -rotate-45 origin-top-right"
-          style={{ filter: 'blur(20px)' }}
+          style={{ filter: 'blur(20px)' } as React.CSSProperties}
           animate={{
             opacity: [0.3, 0.7, 0.3],
             rotate: [-45, -55, -45]
@@ -81,7 +81,7 @@ const LightingEffect = () => {
         {/* Center spotlight */}
         <motion.div 
           className="absolute top-0 left-1/2 -translate-x-1/2 w-72 h-[200vh] bg-white/20 rounded-[50%] origin-top"
-          style={{ filter: 'blur(15px)' }}
+          style={{ filter: 'blur(15px)' } as React.CSSProperties}
           animate={{
             opacity: [0.2, 0.4, 0.2],
             scaleX: [1, 1.2, 1]
@@ -106,7 +106,7 @@ const LightingEffect = () => {
                 filter: 'blur(20px)',
                 top: `${20 + i * 15}%`,
                 left: `${10 + i * 20}%`
-              }}
+              } as React.CSSProperties}
               animate={{
                 x: [0, 50, -30, 0],
                 y: [0, -30, 20, 0],
@@ -130,9 +130,9 @@ const LightingEffect = () => {
             key={`beam-${i}`}
             className="absolute w-12 h-[90vh] bg-gradient-to-t from-blue-400/50 to-transparent rounded-full origin-bottom"
             style={{
-              rotate: i * 60,
+              transform: `rotate(${i * 60}deg)`,
               filter: 'blur(8px)'
-            }}
+            } as React.CSSProperties}
             animate={{
               rotate: [i * 60, i * 60 + 360]
             }}
@@ -159,38 +159,46 @@ const LightingEffect = () => {
             filter: 'blur(15px)',
             transform: 'translate(-50%, -50%)',
             animation: 'flash-fade 150ms ease-out forwards',
-          }}
+          } as React.CSSProperties}
         />
       ))}
       
       {/* Light particles */}
       <div className="absolute inset-0 pointer-events-none">
-        {[...Array(40)].map((_, i) => (
-          <motion.div
-            key={`particle-${i}`}
-            className="absolute w-1 h-1 rounded-full bg-white"
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`
-            }}
-            animate={{
-              opacity: [0, 0.8, 0],
-              scale: [0, 1, 0]
-            }}
-            transition={{
-              duration: 1 + Math.random() * 2,
-              repeat: Infinity,
-              delay: Math.random() * 5
-            }}
-          />
-        ))}
+        {[...Array(40)].map((_, i) => {
+          const left = `${Math.random() * 100}%`;
+          const top = `${Math.random() * 100}%`;
+          return (
+            <div
+              key={`particle-${i}`}
+              className="absolute w-1 h-1 rounded-full bg-white"
+              style={{
+                left,
+                top
+              }}
+            >
+              <motion.div
+                className="w-full h-full rounded-full"
+                animate={{
+                  opacity: [0, 0.8, 0],
+                  scale: [0, 1, 0]
+                }}
+                transition={{
+                  duration: 1 + Math.random() * 2,
+                  repeat: Infinity,
+                  delay: Math.random() * 5
+                }}
+              />
+            </div>
+          );
+        })}
       </div>
       
       {/* Lens flare effect */}
       <div className="absolute top-1/3 left-1/3 w-60 h-60 pointer-events-none">
         <motion.div
           className="w-full h-full rounded-full bg-gradient-to-r from-blue-500/30 via-transparent to-purple-500/30"
-          style={{ filter: 'blur(20px)' }}
+          style={{ filter: 'blur(20px)' } as React.CSSProperties}
           animate={{
             scale: [1, 1.2, 1],
             opacity: [0.3, 0.6, 0.3]

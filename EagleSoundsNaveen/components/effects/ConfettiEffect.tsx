@@ -117,7 +117,7 @@ const ConfettiEffect = () => {
               left: `${initialX}%`,
               top: '-5%',
               opacity: 0,
-            }}
+            } as React.CSSProperties}
             animate={isActive ? {
               y: ['-5%', '100%'],
               x: [0, (Math.random() - 0.5) * 200], // Move randomly left/right as falling
@@ -153,7 +153,7 @@ const ConfettiEffect = () => {
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
               opacity: 0,
-            }}
+            } as React.CSSProperties}
             animate={{
               x: [0, (Math.random() - 0.5) * 150],
               y: [0, (Math.random() - 0.5) * 100],

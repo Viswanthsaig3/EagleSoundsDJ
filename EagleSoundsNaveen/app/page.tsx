@@ -145,17 +145,18 @@ export default function Home() {
             {services.map((service, index) => (
               <motion.div
                 key={service.id}
-                className="bg-darker rounded-xl overflow-hidden shadow-lg border border-blue-900/20 group hover:border-primary/50 transition-all duration-300"
+                className="bg-darker rounded-xl overflow-hidden shadow-lg border border-blue-900/20 group hover:border-primary/50 transition-all duration-300 flex flex-col h-full"
                 initial={{ opacity: 0, y: 20 }}
                 animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                <div className="relative h-56 overflow-hidden">
+                <div className="relative h-48 sm:h-56 overflow-hidden">
                   <Image 
                     src={service.image} 
                     alt={service.title}
                     fill
                     className="object-cover transition-transform duration-500 group-hover:scale-110"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-darker to-transparent"></div>
                   
@@ -164,12 +165,12 @@ export default function Home() {
                   </div>
                 </div>
                 
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-primary transition-colors">{service.title}</h3>
-                  <p className="text-blue-100/70 mb-5 h-[4.5rem]">{service.description}</p>
+                <div className="p-4 sm:p-6 flex flex-col flex-grow">
+                  <h3 className="text-xl font-bold text-white mb-2 sm:mb-3 group-hover:text-primary transition-colors">{service.title}</h3>
+                  <p className="text-blue-100/70 mb-4 sm:mb-5 flex-grow">{service.description}</p>
                   <Link 
                     href={service.link}
-                    className="inline-flex items-center text-primary hover:text-white px-4 py-2 rounded-lg border border-primary hover:bg-primary transition-all duration-300"
+                    className="inline-flex items-center justify-center sm:justify-start text-primary hover:text-white px-4 py-2 rounded-lg border border-primary hover:bg-primary transition-all duration-300 w-full sm:w-auto"
                   >
                     Learn More
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -244,7 +245,8 @@ export default function Home() {
                   src="/why-choose-us.jpg" 
                   alt="Eagle Sounds Event" 
                   fill
-                  className="object-cover rounded-xl" 
+                  className="object-cover rounded-xl"
+                  sizes="(max-width: 1024px) 100vw, 50vw" // Added sizes 
                 />
                 
                 <div className="absolute inset-0 bg-gradient-to-t from-darker to-transparent opacity-60"></div>
@@ -262,9 +264,9 @@ export default function Home() {
       </section>
       
       {/* Call-to-Action Section */}
-      <section className="py-16 bg-gradient-to-b from-darker to-dark relative overflow-hidden">
-        <div className="container-custom relative z-10">
-          <div className="bg-primary/10 backdrop-blur-sm rounded-2xl p-8 md:p-12 border border-primary/20">
+      <section className="py-12 sm:py-16 bg-gradient-to-b from-darker to-dark relative overflow-hidden">
+        <div className="container-custom relative z-10 px-4 sm:px-6">
+          <div className="bg-primary/10 backdrop-blur-sm rounded-2xl p-5 sm:p-8 md:p-12 border border-primary/20">
             <div className="text-center max-w-3xl mx-auto">
               <motion.h2 
                 className="heading-lg mb-6"
@@ -288,16 +290,16 @@ export default function Home() {
               </motion.p>
               
               <motion.div
-                className="flex flex-col sm:flex-row justify-center gap-4 mb-8"
+                className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 mb-6 sm:mb-8"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 viewport={{ once: true }}
               >
-                <Link href="/contact" className="btn-primary">
+                <Link href="/contact" className="btn-primary w-full sm:w-auto">
                   Contact Us
                 </Link>
-                <Link href="/vendor" className="btn-secondary">
+                <Link href="/vendor" className="btn-secondary w-full sm:w-auto">
                   Explore Services
                 </Link>
               </motion.div>

@@ -119,6 +119,8 @@ export default function AboutPage() {
             alt="About Eagle Sounds" 
             fill
             className="object-cover"
+            priority={true} // Added priority
+            sizes="100vw" // Added sizes
           />
         </div>
         
@@ -226,6 +228,7 @@ export default function AboutPage() {
                 alt="About Eagle Sounds" 
                 fill
                 className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 50vw" // Added sizes
                 onError={(e) => {
                   // Fallback to placeholder if image fails to load
                   e.currentTarget.style.display = 'none';
@@ -281,29 +284,25 @@ export default function AboutPage() {
           </div>
           
           {/* Embedded YouTube Videos - Made Larger */}
-          <div className="grid grid-cols-1 gap-8 mt-8">
+          <div className="grid grid-cols-1 gap-6 sm:gap-8 mt-6 sm:mt-8">
             <div className="aspect-w-16 aspect-h-9 w-full rounded-lg overflow-hidden shadow-lg">
               <iframe
-                width="100%"
-                height="100%"
                 src="https://www.youtube.com/embed/1u5iDF1Wk1A"
                 title="Eagle Sounds Event Video 1"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
-                className="w-full h-[500px]"
+                className="w-full h-56 sm:h-72 md:h-96 lg:h-[500px]"
               ></iframe>
             </div>
-            <div className="aspect-w-16 aspect-h-9 w-full rounded-lg overflow-hidden shadow-lg mt-12">
+            <div className="aspect-w-16 aspect-h-9 w-full rounded-lg overflow-hidden shadow-lg mt-6 sm:mt-12">
               <iframe
-                width="100%"
-                height="100%"
                 src="https://www.youtube.com/embed/IKG2zx9uWcU"
                 title="Eagle Sounds Event Video 2"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
-                className="w-full h-[500px]"
+                className="w-full h-56 sm:h-72 md:h-96 lg:h-[500px]"
               ></iframe>
             </div>
           </div>
@@ -341,6 +340,7 @@ export default function AboutPage() {
                     alt={member.name} 
                     fill
                     className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 33vw" // Added sizes
                     onError={(e) => {
                       // Fallback to placeholder if image fails to load
                       e.currentTarget.style.display = 'none';
@@ -367,7 +367,7 @@ export default function AboutPage() {
             </p>
           </div>
           
-          <div className="flex flex-wrap justify-center gap-8">
+          <div className="flex flex-wrap justify-center gap-4 sm:gap-8">
             <motion.a 
               href="https://www.instagram.com/eagle__sounds/" 
               target="_blank" 

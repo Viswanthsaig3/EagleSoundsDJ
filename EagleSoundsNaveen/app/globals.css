@@ -122,17 +122,19 @@ body {
   }
   
   .btn-primary {
-    @apply bg-primary text-darker px-6 py-3 rounded-md font-medium inline-block 
+    @apply bg-primary text-darker px-4 sm:px-6 py-3 rounded-md font-medium inline-block 
     transition-all duration-300 hover:bg-opacity-90 hover:-translate-y-1 shadow-md hover:shadow-neon-blue
     relative overflow-hidden z-10 before:absolute before:inset-0 before:bg-accent before:opacity-0 
-    before:transition-opacity before:duration-300 hover:before:opacity-30 before:-z-10;
+    before:transition-opacity before:duration-300 hover:before:opacity-30 before:-z-10
+    text-center justify-center w-full sm:w-auto;
   }
   
   .btn-secondary {
-    @apply bg-secondary text-light px-6 py-3 rounded-md font-medium inline-block 
+    @apply bg-secondary text-light px-4 sm:px-6 py-3 rounded-md font-medium inline-block 
     transition-all duration-300 hover:bg-opacity-90 hover:-translate-y-1 shadow-md
     relative overflow-hidden z-10 before:absolute before:inset-0 before:bg-blue-400 before:opacity-0 
-    before:transition-opacity before:duration-300 hover:before:opacity-20 before:-z-10;
+    before:transition-opacity before:duration-300 hover:before:opacity-20 before:-z-10
+    text-center justify-center w-full sm:w-auto;
   }
   
   .service-card {
@@ -205,5 +207,58 @@ body {
     @apply before:absolute before:inset-0 before:bg-gradient-to-r 
     before:from-transparent before:via-white/5 before:to-transparent before:-skew-x-12
     before:opacity-0 hover:before:opacity-100 before:transition-opacity before:duration-700;
+  }
+  
+  /* Mobile optimizations */
+  .mobile-container {
+    @apply px-4 sm:px-6 md:px-8;
+  }
+  
+  .mobile-padding {
+    @apply py-8 sm:py-12 md:py-16 lg:py-20;
+  }
+  
+  .mobile-heading-xl {
+    @apply text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-display font-bold;
+  }
+  
+  .mobile-heading-lg {
+    @apply text-xl sm:text-2xl md:text-3xl lg:text-4xl font-display font-bold;
+  }
+  
+  .mobile-flex-col {
+    @apply flex flex-col sm:flex-row;
+  }
+  
+  .mobile-full-width {
+    @apply w-full sm:w-auto;
+  }
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 640px) {
+  .heading-xl {
+    font-size: 1.875rem; /* 30px */
+    line-height: 2.25rem; /* 36px */
+  }
+  
+  .heading-lg {
+    font-size: 1.5rem; /* 24px */
+    line-height: 2rem; /* 32px */
+  }
+  
+  .heading-md {
+    font-size: 1.25rem; /* 20px */
+    line-height: 1.75rem; /* 28px */
+  }
+  
+  .section-padding {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+  
+  .container-custom {
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 }

@@ -35,10 +35,13 @@ export default function PlaceholderImage({
           className={className}
           onError={() => setIsError(true)}
           priority={priority}
+          // Consider adding a generic blurDataURL if you want a loading blur effect
+          // placeholder="blur" 
+          // blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
         />
       ) : (
         <div 
-          className={`placeholder-bg ${className}`}
+          className={`placeholder-bg shimmer ${className}`} // Added shimmer class
           style={!fill ? { width: width, height: height } : { position: 'absolute', inset: 0 }}
         >
           {placeholderText}
