@@ -70,8 +70,8 @@ const Footer = () => {
                    className="text-blue-300 hover:text-primary transition-colors">
                   <FaYoutube className="text-xl" />
                 </a>
-                <a href="https://www.whatsapp.com/channel/0029VaPiu4dLCoX11y5kmd0x" target="_blank" rel="noopener noreferrer" 
-                   className="text-blue-300 hover:text-primary transition-colors">
+                <a href="https://wa.me/918121525235" target="_blank" rel="noopener noreferrer" 
+                   className="text-blue-300 hover:text-primary transition-colors" title="Contact on WhatsApp">
                   <FaWhatsapp className="text-xl" />
                 </a>
                 <a href="https://www.facebook.com/eagle.sounds.2025/" target="_blank" rel="noopener noreferrer" 
