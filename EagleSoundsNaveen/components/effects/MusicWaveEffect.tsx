@@ -40,20 +40,20 @@ const MusicWaveEffect = () => {
         </div>
       </div>
       
-      {/* Left side vertical equalizer */}
-      <div className="absolute left-10 top-1/4 bottom-1/4 w-16 flex items-center justify-between rotate-180 pointer-events-none">
-        <div className="flex flex-col items-center justify-center h-full gap-1">
-          {[...Array(20)].map((_, i) => (
+      {/* Left side vertical equalizer - hidden on mobile */}
+      <div className="absolute left-2 top-1/4 bottom-1/4 w-8 md:w-16 md:left-10 hidden sm:flex items-center justify-between rotate-180 pointer-events-none">
+        <div className="flex flex-col items-center justify-center h-full gap-0.5 md:gap-1">
+          {[...Array(15)].map((_, i) => ( // Reduced bars for smaller screens if shown, but hidden on xs
             <motion.div
               key={`left-${i}`}
-              className="h-1.5 rounded-full bg-gradient-to-r from-blue-500 to-primary"
-              initial={{ width: 5 }}
+              className="h-1 md:h-1.5 rounded-full bg-gradient-to-r from-blue-500 to-primary"
+              initial={{ width: 3 }}
               animate={{ 
                 width: isActive ? [
-                  5, 
-                  Math.random() * 60 + 10,
-                  5
-                ] : 5,
+                  3, 
+                  Math.random() * 30 + 5, // Reduced max width for smaller screens
+                  3
+                ] : 3,
               }}
               transition={{
                 duration: 0.8 + Math.random() * 0.7,
@@ -67,20 +67,20 @@ const MusicWaveEffect = () => {
         </div>
       </div>
       
-      {/* Right side vertical equalizer */}
-      <div className="absolute right-10 top-1/4 bottom-1/4 w-16 flex items-center justify-between pointer-events-none">
-        <div className="flex flex-col items-center justify-center h-full gap-1">
-          {[...Array(20)].map((_, i) => (
+      {/* Right side vertical equalizer - hidden on mobile */}
+      <div className="absolute right-2 top-1/4 bottom-1/4 w-8 md:w-16 md:right-10 hidden sm:flex items-center justify-between pointer-events-none">
+        <div className="flex flex-col items-center justify-center h-full gap-0.5 md:gap-1">
+          {[...Array(15)].map((_, i) => ( // Reduced bars for smaller screens if shown, but hidden on xs
             <motion.div
               key={`right-${i}`}
-              className="h-1.5 rounded-full bg-gradient-to-r from-primary to-blue-500"
-              initial={{ width: 5 }}
+              className="h-1 md:h-1.5 rounded-full bg-gradient-to-r from-primary to-blue-500"
+              initial={{ width: 3 }}
               animate={{ 
                 width: isActive ? [
-                  5, 
-                  Math.random() * 60 + 10,
-                  5
-                ] : 5,
+                  3, 
+                  Math.random() * 30 + 5, // Reduced max width for smaller screens
+                  3
+                ] : 3,
               }}
               transition={{
                 duration: 0.8 + Math.random() * 0.7,

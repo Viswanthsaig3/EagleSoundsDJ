@@ -362,11 +362,11 @@ export default function Home() {
                     <FaYoutube className="text-2xl" />
                   </a>
                   <a 
-                    href="https://www.whatsapp.com/channel/0029VaPiu4dLCoX11y5kmd0x" 
+                    href="https://wa.me/918121525235" 
                     target="_blank" 
                     rel="noopener noreferrer" 
                     className="text-green-500 hover:text-white hover:bg-green-500 p-2 rounded-full transition-colors"
-                    title="Join Eagle Sounds WhatsApp Channel"
+                    title="Contact Eagle Sounds on WhatsApp"
                     aria-label="WhatsApp"
                   >
                     <FaWhatsapp className="text-2xl" />
