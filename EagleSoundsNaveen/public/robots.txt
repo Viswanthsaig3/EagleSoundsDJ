@@ -1,4 +1,30 @@
 User-agent: *
 Allow: /
+Allow: /vendor
+Allow: /about
+Allow: /contact
+Allow: /*.css
+Allow: /*.js
+Allow: /*.png
+Allow: /*.jpg
+Allow: /*.jpeg
+Allow: /*.gif
+Allow: /*.svg
+Allow: /*.ico
 
-Sitemap: https://eaglesounds.com/sitemap.xml
+# Block sensitive files
+Disallow: /api/
+Disallow: /_next/static/
+Disallow: /admin/
+Disallow: /.env*
+
+# Crawl delay
+Crawl-delay: 1
+
+# Sitemaps
+Sitemap: https://eaglesounds.in/sitemap.xml
+Sitemap: https://eaglesounds.in/sitemap-images.xml
+
+# Google verification (replace with your actual verification file)
+# Add your Google verification file name here after creating it
+# Example: google-site-verification: googleXXXXXXXXXXXXXXXX.html
