@@ -1,17 +1,32 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
+import Navbar from '@/components/Navbar' // Import Navbar
 
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://eaglesounds.in'),
   title: {
-    default: 'Eagle Sounds - Professional DJ & Event Services in India',
-    template: '%s | Eagle Sounds'
+    default: 'Eagle Sounds - Best DJ & Event Services in Guntur, India', // Updated title
+    template: '%s | Eagle Sounds Guntur' // Updated template
   },
-  description: 'Premium DJ services, sound systems, lighting, photography and smoke effects for weddings, parties, college events, and festivals across India. Professional event solutions since 2020.',
+  description: 'Eagle Sounds offers the best DJ services, sound systems, lighting, photography, and smoke effects in Guntur for weddings, parties, college events, and festivals. Professional event solutions in Guntur since 2020.', // Updated description
   keywords: [
+    'best dj in guntur',
+    'dj services guntur',
+    'guntur dj',
+    'wedding dj guntur',
+    'event dj guntur',
+    'sound system rental guntur',
+    'professional dj guntur',
+    'party dj guntur',
+    'college event dj guntur',
+    'festival sound systems guntur',
+    'event lighting guntur',
+    'smoke machine rental guntur',
+    'event photography guntur',
+    'DJ booking Guntur',
     'DJ services India',
     'wedding DJ',
     'event DJ',
@@ -28,9 +43,9 @@ export const metadata: Metadata = {
     'music events',
     'dance parties'
   ],
-  authors: [{ name: 'Eagle Sounds', url: 'https://eaglesounds.in' }],
-  creator: 'Eagle Sounds',
-  publisher: 'Eagle Sounds',
+  authors: [{ name: 'Eagle Sounds Guntur', url: 'https://eaglesounds.in' }], // Updated author
+  creator: 'Eagle Sounds Guntur', // Updated creator
+  publisher: 'Eagle Sounds Guntur', // Updated publisher
   formatDetection: {
     email: false,
     address: false,
@@ -40,9 +55,9 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_IN',
     url: 'https://eaglesounds.in',
-    siteName: 'Eagle Sounds',
-    title: 'Eagle Sounds - Professional DJ & Event Services in India',
-    description: 'Premium DJ services, sound systems, lighting and event solutions for weddings, parties, college events, and festivals across India.',
+    siteName: 'Eagle Sounds Guntur', // Updated siteName
+    title: 'Eagle Sounds - Best DJ & Event Services in Guntur', // Updated title
+    description: 'Premium DJ services, sound systems, lighting and event solutions in Guntur for weddings, parties, college events, and festivals.', // Updated description
     images: [
       {
         url: '/og-image.jpg',
@@ -54,8 +69,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Eagle Sounds - Professional DJ & Event Services',
-    description: 'Premium DJ services, sound systems, lighting and event solutions across India.',
+    title: 'Eagle Sounds - Best DJ & Event Services in Guntur', // Updated title
+    description: 'Premium DJ services, sound systems, lighting and event solutions in Guntur and across India.', // Updated description
     images: ['/twitter-image.jpg'],
   },
   robots: {
@@ -108,8 +123,8 @@ export default function RootLayout({
               "@type": "LocalBusiness",
               "@id": "https://eaglesounds.in/#business",
               "name": "Eagle Sounds",
-              "alternateName": "Eagle DJ Sounds",
-              "description": "Professional DJ and event services company providing sound systems, lighting, photography and smoke effects for weddings, parties, college events, and festivals.",
+              "alternateName": "Eagle DJ Sounds Guntur",
+              "description": "Professional DJ and event services company in Guntur, providing sound systems, lighting, photography and smoke effects for weddings, parties, college events, and festivals.",
               "url": "https://eaglesounds.in",
               "telephone": "+918121525235",
               "email": "Naveencandc4689@gmail.com",
@@ -121,22 +136,29 @@ export default function RootLayout({
               "logo": "https://eaglesounds.in/logo.png",
               "address": {
                 "@type": "PostalAddress",
-                "addressCountry": "IN",
-                "addressRegion": "Andhra Pradesh"
+                "streetAddress": "Your Street Address", // Add specific address
+                "addressLocality": "Guntur",
+                "addressRegion": "Andhra Pradesh",
+                "postalCode": "Your Postal Code", // Add postal code
+                "addressCountry": "IN"
               },
               "geo": {
                 "@type": "GeoCoordinates",
-                "latitude": 16.222400,
-                "longitude": 80.517117
+                "latitude": 16.3067, // Latitude for Guntur
+                "longitude": 80.4365  // Longitude for Guntur
               },
               "areaServed": [
                 {
-                  "@type": "Country",
-                  "name": "India"
+                  "@type": "City",
+                  "name": "Guntur"
                 },
                 {
                   "@type": "State",
                   "name": "Andhra Pradesh"
+                },
+                {
+                  "@type": "Country",
+                  "name": "India"
                 }
               ],
               "serviceType": "DJ Services",
@@ -245,6 +267,7 @@ export default function RootLayout({
         <link rel="manifest" href="/manifest.json" />
       </head>
       <body className={`${inter.className} antialiased`}>
+        <Navbar /> {/* Add Navbar here */}
         {children}
         
         {/* Google Tag Manager (noscript) */}

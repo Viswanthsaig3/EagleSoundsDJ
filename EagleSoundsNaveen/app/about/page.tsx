@@ -12,25 +12,25 @@ const stats = [
   {
     id: 1,
     value: '5+',
-    label: 'Years Experience',
+    label: 'Years Experience in Guntur',
     icon: <FaCalendarCheck className="text-3xl text-primary" />,
   },
   {
     id: 2,
     value: '250+',
-    label: 'Events Completed',
+    label: 'Events Completed in Guntur',
     icon: <FaCheckCircle className="text-3xl text-primary" />,
   },
   {
     id: 3,
     value: '100+',
-    label: 'Happy Clients',
+    label: 'Happy Clients in Guntur',
     icon: <FaUsers className="text-3xl text-primary" />,
   },
   {
     id: 4,
     value: '20+',
-    label: 'Awards & Recognition',
+    label: 'Awards & Recognition in Guntur',
     icon: <FaAward className="text-3xl text-primary" />,
   },
 ];
@@ -47,8 +47,8 @@ const teamMembers = [
   {
     id: 1,
     name: 'Tholusuri Naveen',
-    position: 'Founder & CEO',
-    bio: 'With over 10 years of experience in the events industry, Naveen founded Eagle Sounds with a vision to provide premium DJ and event services in the region.',
+    position: 'Founder & CEO - Guntur Event Specialist',
+    bio: 'With over 10 years of experience in the events industry, Naveen founded Eagle Sounds with a vision to provide premium DJ and event services in Guntur and the surrounding region. He aims to be recognized as the provider of the best DJ services in Guntur.',
     image: '/team1.jpg',
   },
 ];
@@ -130,7 +130,7 @@ export default function AboutPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
             >
-              About <span className="glow-text">Eagle Sounds</span>
+              About <span className="glow-text">Eagle Sounds Guntur</span>
             </motion.h1>
             <motion.p 
               className="text-lg text-white/90 mb-4"
@@ -138,7 +138,7 @@ export default function AboutPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
             >
-              Bringing life to your events with premium sound, lighting, and entertainment services.
+              Bringing life to your events in Guntur with premium sound, lighting, and entertainment services. We are your top choice for the best DJ in Guntur.
             </motion.p>
             <motion.div 
               className="flex gap-4 mt-8"
@@ -166,21 +166,21 @@ export default function AboutPage() {
               animate={storyInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
               transition={{ duration: 0.7 }}
             >
-              <h2 className="heading-lg mb-6 text-white">Our <span className="emphasis-text">Story</span></h2>
+              <h2 className="heading-lg mb-6 text-white">Our <span className="emphasis-text">Story in Guntur</span></h2>
               <p className="text-blue-100/70 mb-4">
-                Eagle Sounds was founded with a passion for creating memorable experiences through music and entertainment. 
-                Starting as a small local DJ service, we've grown into a comprehensive event services provider catering 
-                to various events across the region.
+                Eagle Sounds was founded with a passion for creating memorable experiences through music and entertainment in Guntur. 
+                Starting as a small local DJ service in Guntur, we've grown into a comprehensive event services provider catering 
+                to various events across the Guntur region.
               </p>
               <p className="text-blue-100/70 mb-4">
                 Our journey began when founder Tholusuri Naveen recognized the need for professional DJ and sound 
-                services for local events. With dedication to quality and customer satisfaction, we've expanded our 
-                services to include lighting, decorations, photo shoots, and more.
+                services for local events in Guntur. With dedication to quality and customer satisfaction, we've expanded our 
+                services to include lighting, decorations, photo shoots, and more, solidifying our reputation as the best DJ service in Guntur.
               </p>
               <p className="text-blue-100/70 mb-6">
-                Today, Eagle Sounds is known for its reliability, professionalism, and ability to transform ordinary 
+                Today, Eagle Sounds is known in Guntur for its reliability, professionalism, and ability to transform ordinary 
                 events into extraordinary experiences. We take pride in our state-of-the-art equipment, experienced 
-                team, and commitment to excellence in every project we undertake.
+                team, and commitment to excellence in every Guntur project we undertake.
               </p>
               <div className="flex items-center">
                 <div className="relative w-16 h-16 rounded-full overflow-hidden mr-4 border-2 border-primary/50 shadow-neon-blue">
@@ -238,9 +238,9 @@ export default function AboutPage() {
       <section ref={statsRef} className="section-padding section-gradient py-20">
         <div className="container-custom">
           <div className="text-center mb-12">
-            <h2 className="heading-lg mb-6 text-white">Our <span className="emphasis-text">Achievements</span></h2>
+            <h2 className="heading-lg mb-6 text-white">Our <span className="emphasis-text">Achievements in Guntur</span></h2>
             <p className="text-blue-100/70 mx-auto max-w-2xl">
-              Over the years, we've had the privilege of serving numerous clients and being part of countless memorable events.
+              Over the years, we've had the privilege of serving numerous clients in Guntur and being part of countless memorable events.
             </p>
           </div>
           
@@ -271,9 +271,9 @@ export default function AboutPage() {
       <section id="gallery" ref={galleryRef} className="section-padding section-dark">
         <div className="container-custom">
           <div className="text-center mb-12">
-            <h2 className="heading-lg mb-6 text-white">Our <span className="emphasis-text">Gallery</span></h2>
+            <h2 className="heading-lg mb-6 text-white">Our <span className="emphasis-text">Gallery from Guntur Events</span></h2>
             <p className="text-blue-100/70 mx-auto max-w-2xl mb-8">
-              Check out our featured event videos below.
+              Check out our featured event videos from Guntur below.
             </p>
           </div>
           
@@ -307,9 +307,9 @@ export default function AboutPage() {
       <section ref={teamRef} className="section-padding section-gradient">
         <div className="container-custom">
           <div className="text-center mb-12">
-            <h2 className="heading-lg mb-6 text-white">Meet Our <span className="emphasis-text">Team</span></h2>
+            <h2 className="heading-lg mb-6 text-white">Meet Our <span className="emphasis-text">Guntur Team</span></h2>
             <p className="text-blue-100/70 mx-auto max-w-2xl">
-              The passionate professionals behind Eagle Sounds dedicated to making your events extraordinary.
+              The passionate professionals behind Eagle Sounds in Guntur, dedicated to making your events extraordinary.
             </p>
           </div>
           
@@ -462,9 +462,9 @@ export default function AboutPage() {
         </div>
         
         <div className="container-custom text-center relative z-10">
-          <h2 className="heading-lg mb-6 text-white">Ready to <span className="emphasis-text">Collaborate</span>?</h2>
+          <h2 className="heading-lg mb-6 text-white">Ready to <span className="emphasis-text">Collaborate in Guntur</span>?</h2>
           <p className="text-blue-100/80 max-w-2xl mx-auto mb-8">
-            Get in touch with us at <a href="mailto:Naveencandc4689@gmail.com" className="text-primary hover:underline">Naveencandc4689@gmail.com</a> to discuss your requirements and how we can make your event special.
+            Get in touch with us at <a href="mailto:Naveencandc4689@gmail.com" className="text-primary hover:underline">Naveencandc4689@gmail.com</a> to discuss your requirements for your Guntur event and how we can make it special. We are the best DJ choice in Guntur.
           </p>
           <Link href="/contact" className="btn-primary">
             Contact Us Now

@@ -12,32 +12,32 @@ import { FaMusic, FaLightbulb, FaCamera, FaSmog, FaInstagram, FaYoutube, FaWhats
 const services = [
   {
     id: 1,
-    title: 'DJ Services',
-    description: 'Our professional DJ services cater to various events with high-quality sound systems and experienced DJs who know how to keep your crowd energized.',
+    title: 'DJ Services in Guntur',
+    description: 'Our professional DJ services cater to various events in Guntur and surrounding areas with high-quality sound systems and experienced DJs who know how to keep your crowd energized.',
     icon: <FaMusic className="text-primary text-3xl" />,
     link: '/vendor#dj',
     image: '/dj-service.jpg', // Ensure this file exists
   },
   {
     id: 2,
-    title: 'Lighting Solutions',
-    description: 'Transform your venue with our professional lighting solutions for indoor and outdoor events, creating the perfect atmosphere for your celebration.',
+    title: 'Lighting Solutions for Guntur Events',
+    description: 'Transform your Guntur venue with our professional lighting solutions for indoor and outdoor events, creating the perfect atmosphere for your celebration.',
     icon: <FaLightbulb className="text-primary text-3xl" />,
     link: '/vendor#lighting',
     image: '/lighting-service.jpg',
   },
   {
     id: 3,
-    title: 'Photography',
-    description: 'Capture your special moments with our professional photography services for various occasions, from weddings and birthdays to corporate events.',
+    title: 'Photography in Guntur',
+    description: 'Capture your special moments in Guntur with our professional photography services for various occasions, from weddings and birthdays to corporate events.',
     icon: <FaCamera className="text-primary text-3xl" />,
     link: '/vendor#photos',
     image: '/photo-service.jpg',
   },
   {
     id: 4,
-    title: 'Smoke Effects',
-    description: 'Create dramatic atmosphere and enhance your lighting with our professional smoke, fog, and haze machines for any event.',
+    title: 'Smoke Effects for Guntur Parties',
+    description: 'Create dramatic atmosphere and enhance your lighting with our professional smoke, fog, and haze machines for any event in Guntur.',
     icon: <FaSmog className="text-primary text-3xl" />,
     link: '/vendor#smoke',
     image: '/smoke-service.jpg',
@@ -55,9 +55,9 @@ export default function Home() {
   const carouselItems = [
     {
       id: 1,
-      title: 'Premium DJ Experiences',
-      subtitle: 'Where Music Meets Magic',
-      description: 'Transform your events with our state-of-the-art sound systems and professional DJs who create unforgettable musical journeys tailored to your celebration.',
+      title: 'Premium DJ Experiences in Guntur',
+      subtitle: 'Where Music Meets Magic in Guntur',
+      description: 'Transform your Guntur events with our state-of-the-art sound systems and professional DJs who create unforgettable musical journeys tailored to your celebration.',
       buttonText: 'Book Your DJ',
       buttonLink: '/vendor#dj',
       secondaryButtonText: 'Listen to Mixes',
@@ -71,9 +71,9 @@ export default function Home() {
     },
     {
       id: 2,
-      title: 'Cinematic Photography',
-      subtitle: 'Capturing Moments, Creating Memories',
-      description: 'Professional photography services that freeze your precious moments in time with artistic vision and technical excellence.',
+      title: 'Cinematic Photography in Guntur',
+      subtitle: 'Capturing Moments, Creating Memories in Guntur',
+      description: 'Professional photography services in Guntur that freeze your precious moments in time with artistic vision and technical excellence.',
       buttonText: 'View Portfolio',
       buttonLink: '/vendor#photos',
       secondaryButtonText: 'Contact Photographer',
@@ -86,9 +86,9 @@ export default function Home() {
     },
     {
       id: 3,
-      title: 'Atmospheric Smoke Effects',
-      subtitle: 'Drama That Takes Your Breath Away',
-      description: 'Create stunning visual effects and dramatic atmospheres with our professional-grade smoke machines and lighting combinations.',
+      title: 'Atmospheric Smoke Effects for Guntur Events',
+      subtitle: 'Drama That Takes Your Breath Away in Guntur',
+      description: 'Create stunning visual effects and dramatic atmospheres in Guntur with our professional-grade smoke machines and lighting combinations.',
       buttonText: 'See Effects',
       buttonLink: '/vendor#smoke',
       secondaryButtonText: 'Learn More',
@@ -101,9 +101,9 @@ export default function Home() {
     },
     {
       id: 4,
-      title: 'Complete Event Solutions',
-      subtitle: 'Your Vision, Our Expertise',
-      description: 'From intimate gatherings to grand celebrations, we provide comprehensive event services that bring your dreams to life with precision and creativity.',
+      title: 'Complete Event Solutions in Guntur',
+      subtitle: 'Your Vision, Our Expertise in Guntur',
+      description: 'From intimate gatherings to grand celebrations in Guntur, we provide comprehensive event services that bring your dreams to life with precision and creativity.',
       buttonText: 'Explore All Services',
       buttonLink: '/vendor',
       secondaryButtonText: 'Get Quote',
@@ -134,12 +134,12 @@ export default function Home() {
             viewport={{ once: true }}
           >
             <h1 className="heading-xl mb-6">
-              Welcome to <span className="text-primary">Eagle Sounds</span>
+              Welcome to <span className="text-primary">Eagle Sounds</span> - Guntur's Premier DJ Service
             </h1>
             <p className="text-lg text-blue-100/80 mb-10">
-              With over 10 years of experience, Eagle Sounds provides premium entertainment and event services in the region. 
+              With over 10 years of experience, Eagle Sounds provides the best entertainment and event services in Guntur and the surrounding region. 
               From professional DJ setups and atmospheric lighting to stunning photography, 
-              we deliver unforgettable experiences for weddings, birthdays, corporate events, and more.
+              we deliver unforgettable experiences for weddings, birthdays, corporate events, and more in Guntur. Looking for the best DJ in Guntur? You've found us!
             </p>
             <Link href="/contact" className="btn-primary">
               Get in Touch
@@ -162,11 +162,11 @@ export default function Home() {
             transition={{ duration: 0.7 }}
           >
             <h2 className="heading-lg mb-4">
-              Our <span className="text-primary">Services</span>
+              Our <span className="text-primary">Services in Guntur</span>
             </h2>
             <p className="text-blue-100/80 max-w-2xl mx-auto">
-              Discover our wide range of professional event services designed to make your celebration perfect.
-              From music to visuals, we've got you covered.
+              Discover our wide range of professional event services designed to make your Guntur celebration perfect.
+              From music to visuals, we've got you covered in Guntur.
             </p>
           </motion.div>
           
@@ -229,18 +229,18 @@ export default function Home() {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <h2 className="heading-lg mb-6">Why Choose <span className="text-primary">Eagle Sounds</span>?</h2>
+              <h2 className="heading-lg mb-6">Why Choose <span className="text-primary">Eagle Sounds</span> in Guntur?</h2>
               <p className="text-blue-100/80 mb-8">
-                With years of experience in the entertainment and event industry, we deliver quality services 
-                customized to your specific needs. Our team of professionals ensures that your event becomes memorable.
+                With years of experience in the entertainment and event industry in Guntur, we deliver quality services 
+                customized to your specific needs. Our team of professionals ensures that your Guntur event becomes memorable. We strive to be the best DJ service in Guntur.
               </p>
               
               <div className="space-y-5">
                 {[
-                  { title: "Professional Equipment", description: "State-of-the-art sound systems, lighting rigs, and the latest technology" },
-                  { title: "Experienced Team", description: "Skilled DJs, photographers, and event specialists with years of experience" },
-                  { title: "Custom Solutions", description: "Personalized packages tailored to match your vision and budget" },
-                  { title: "Reliable Service", description: "Punctual, professional, and committed to exceeding expectations" }
+                  { title: "Professional Equipment for Guntur Events", description: "State-of-the-art sound systems, lighting rigs, and the latest technology for your event in Guntur" },
+                  { title: "Experienced Guntur Team", description: "Skilled DJs, photographers, and event specialists with years of experience in Guntur" },
+                  { title: "Custom Solutions for Guntur", description: "Personalized packages tailored to match your vision and budget in Guntur" },
+                  { title: "Reliable Service in Guntur", description: "Punctual, professional, and committed to exceeding expectations for Guntur events" }
                 ].map((item, index) => (
                   <motion.div 
                     key={index}
@@ -304,7 +304,7 @@ export default function Home() {
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
               >
-                Ready to Create an <span className="text-primary">Unforgettable Event</span>?
+                Ready to Create an <span className="text-primary">Unforgettable Event in Guntur</span>?
               </motion.h2>
               
               <motion.p 
@@ -314,8 +314,8 @@ export default function Home() {
                 transition={{ duration: 0.6, delay: 0.1 }}
                 viewport={{ once: true }}
               >
-                Contact us today to discuss your event needs and get a customized quote. 
-                Let's work together to make your next event spectacular!
+                Contact us today to discuss your event needs in Guntur and get a customized quote. 
+                Let's work together to make your next Guntur event spectacular! We are known as the best DJ in Guntur.
               </motion.p>
               
               <motion.div

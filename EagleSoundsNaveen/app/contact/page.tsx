@@ -487,8 +487,8 @@ export default function ContactPage() {
             <div className="dark-card">
               <h3 className="text-xl font-display font-semibold mb-3 text-primary">What areas do you service?</h3>
               <p className="text-blue-100/70">
-                We primarily serve [Your City] and surrounding areas within a 100km radius. 
-                For events beyond this area, additional travel charges may apply. Contact us 
+                We primarily serve Guntur and surrounding areas within a 100km radius. 
+                We are proud to offer the best DJ services in Guntur. For events beyond this area, additional travel charges may apply. Contact us 
                 for more information about your specific location.
               </p>
             </div>
@@ -523,9 +523,9 @@ export default function ContactPage() {
         </div>
         
         <div className="container-custom text-center relative z-10">
-          <h2 className="heading-lg mb-6 text-white">Ready to <span className="emphasis-text">Get Started</span>?</h2>
+          <h2 className="heading-lg mb-6 text-white">Ready to <span className="emphasis-text">Get Started in Guntur</span>?</h2>
           <p className="text-blue-100/80 max-w-2xl mx-auto mb-8">
-            Let us make your event special with our professional DJ services and event solutions.
+            Let us make your Guntur event special with our professional DJ services and event solutions. Eagle Sounds is your best bet for a DJ in Guntur.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="#" onClick={(e) => { e.preventDefault(); window.scrollTo(0, 0); }} className="btn-primary">

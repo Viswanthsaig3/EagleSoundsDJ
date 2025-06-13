@@ -2,31 +2,21 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { motion } from 'framer-motion';
-import { 
-  FaEnvelope, 
-  FaPhone, 
-  FaMapMarkerAlt, 
-  FaInstagram, 
-  FaWhatsapp,
-  FaYoutube,
-  FaGoogle,
-  FaFacebook
-} from 'react-icons/fa';
+import { FaMapMarkerAlt, FaPhone, FaEnvelope, FaInstagram, FaYoutube, FaWhatsapp, FaFacebook } from 'react-icons/fa';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
     <footer className="bg-darker relative overflow-hidden">
-      {/* Background Elements */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-10 left-10 w-72 h-72 rounded-full bg-primary/5 filter blur-3xl"></div>
-        <div className="absolute bottom-10 right-10 w-96 h-96 rounded-full bg-blue-500/5 filter blur-3xl"></div>
+      {/* Decorative elements */}
+      <div className="absolute inset-0 opacity-5 pointer-events-none">
+        {/* You can add subtle background patterns or shapes here */}
       </div>
+      
 
       <div className="border-t border-blue-900/30">
-        {/* Main Footer Content */}
+        
         <div className="container-custom py-16 relative z-10">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
             {/* Company Info */}
@@ -36,177 +26,114 @@ const Footer = () => {
                   <div className="flex items-center">
                     <Image
                       src="/logo.png"
-                      alt="Eagle Sounds Logo"
+                      alt="Eagle Sounds Logo Guntur"
                       width={60}
                       height={60}
                       className="mr-3"
                     />
                     <div>
                       <h2 className="text-xl font-bold text-white">Eagle <span className="text-primary">Sounds</span></h2>
-                      <p className="text-sm text-blue-300">Premium Event Services</p>
+                      <p className="text-sm text-blue-300">Premium Event Services in Guntur</p>
                     </div>
                   </div>
                 </Link>
               </div>
 
               <p className="text-blue-100/70 mb-6">
-                Professional DJ services, lighting solutions, photography, and event management for weddings, parties, corporate events, and more.
+                Professional DJ services, lighting solutions, photography, and event management for weddings, parties, corporate events, and more in Guntur. Your best choice for DJ services in Guntur.
               </p>
 
-              <p className="text-white font-medium">Tholusuri Naveen</p>
+              <p className="text-white font-medium mb-2">Tholusuri Naveen</p>
+              <div className="text-blue-100/70 text-sm">
+                <div className="flex items-start mb-2">
+                  <FaMapMarkerAlt className="text-primary mr-2 mt-1 flex-shrink-0" />
+                  <span>Your Business Address, Guntur, Andhra Pradesh, Your Pincode</span>
+                </div>
+                <div className="flex items-center mb-2">
+                  <FaPhone className="text-primary mr-2" />
+                  <a href="tel:+918121525235" className="hover:text-primary">+91 8121525235</a>
+                </div>
+                <div className="flex items-center">
+                  <FaEnvelope className="text-primary mr-2" />
+                  <a href="mailto:Naveencandc4689@gmail.com" className="hover:text-primary truncate">Naveencandc4689@gmail.com</a>
+                </div>
+              </div>
               
               {/* Social Media Links */}
-              <div className="mt-4 flex space-x-3">
-                <a href="https://www.instagram.com/eagle__sounds/" target="_blank" rel="noopener noreferrer" 
-                   className="text-blue-300 hover:text-primary transition-colors">
-                  <FaInstagram className="text-xl" />
+              <div className="mt-6 flex space-x-4">
+                <a href="https://www.instagram.com/eagle__sounds/" target="_blank" rel="noopener noreferrer" className="text-blue-300 hover:text-primary transition-colors" aria-label="Instagram">
+                  <FaInstagram size={22} />
                 </a>
-                <a href="https://www.instagram.com/naveen_tholuchuri_/" target="_blank" rel="noopener noreferrer" 
-                   className="text-blue-300 hover:text-primary transition-colors">
-                  <FaInstagram className="text-xl" />
-                  <span className="sr-only">Owner's Instagram</span>
+                <a href="https://www.youtube.com/@eagledjsounds" target="_blank" rel="noopener noreferrer" className="text-blue-300 hover:text-primary transition-colors" aria-label="YouTube">
+                  <FaYoutube size={22} />
                 </a>
-                <a href="https://www.youtube.com/@eagledjsounds" target="_blank" rel="noopener noreferrer" 
-                   className="text-blue-300 hover:text-primary transition-colors">
-                  <FaYoutube className="text-xl" />
+                <a href="https://wa.me/918121525235" target="_blank" rel="noopener noreferrer" className="text-blue-300 hover:text-primary transition-colors" aria-label="WhatsApp">
+                  <FaWhatsapp size={22} />
                 </a>
-                <a href="https://wa.me/918121525235" target="_blank" rel="noopener noreferrer" 
-                   className="text-blue-300 hover:text-primary transition-colors" title="Contact on WhatsApp">
-                  <FaWhatsapp className="text-xl" />
+                <a href="https://www.facebook.com/eagle.sounds.2025/" target="_blank" rel="noopener noreferrer" className="text-blue-300 hover:text-primary transition-colors" aria-label="Facebook">
+                  <FaFacebook size={22} />
                 </a>
-                <a href="https://www.facebook.com/eagle.sounds.2025/" target="_blank" rel="noopener noreferrer" 
-                   className="text-blue-300 hover:text-primary transition-colors">
-                  <FaFacebook className="text-xl" />
+                 <a href="https://www.instagram.com/naveen_tholuchuri_/" target="_blank" rel="noopener noreferrer" className="text-blue-300 hover:text-primary transition-colors" aria-label="Owner's Instagram">
+                  <FaInstagram size={22} />
                 </a>
               </div>
-            </div>
-
-            {/* Services Links */}
-            <div>
-              <h3 className="text-lg font-bold text-white mb-6 relative before:content-[''] before:absolute before:w-10 before:h-1 before:bg-primary before:-bottom-2">
-                Our Services
-              </h3>
-              
-              <ul className="space-y-3">
-                {[
-                  { name: 'DJ Services', href: '/vendor#dj' },
-                  { name: 'Photography', href: '/vendor#photos' },
-                  { name: 'Lighting Solutions', href: '/vendor#lighting' },
-                  { name: 'Smoke Effects', href: '/vendor#smoke' },
-                  { name: 'Event Decorations', href: '/vendor#decorations' }
-                ].map((service, index) => (
-                  <li key={index}>
-                    <Link 
-                      href={service.href} 
-                      className="text-blue-100/70 hover:text-primary transition-colors flex items-center"
-                    >
-                      <div className="mr-2 w-1.5 h-1.5 rounded-full bg-primary"></div>
-                      {service.name}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
             </div>
 
             {/* Quick Links */}
             <div>
-              <h3 className="text-lg font-bold text-white mb-6 relative before:content-[''] before:absolute before:w-10 before:h-1 before:bg-primary before:-bottom-2">
-                Quick Links
-              </h3>
-              
-              <ul className="space-y-3">
-                {[
-                  { name: 'Home', href: '/' },
-                  { name: 'About Us', href: '/about' },
-                  { name: 'Our Services', href: '/vendor' },
-                  { name: 'Contact Us', href: '/contact' }
-                ].map((link, index) => (
-                  <li key={index}>
-                    <Link 
-                      href={link.href} 
-                      className="text-blue-100/70 hover:text-primary transition-colors flex items-center"
-                    >
-                      <div className="mr-2 w-1.5 h-1.5 rounded-full bg-primary"></div>
-                      {link.name}
-                    </Link>
-                  </li>
-                ))}
+              <h3 className="text-lg font-semibold text-white mb-4">Quick Links</h3>
+              <ul className="space-y-2">
+                <li><Link href="/" className="text-blue-100/70 hover:text-primary transition-colors">Home</Link></li>
+                <li><Link href="/about" className="text-blue-100/70 hover:text-primary transition-colors">About Us</Link></li>
+                <li><Link href="/vendor" className="text-blue-100/70 hover:text-primary transition-colors">Services</Link></li>
+                <li><Link href="/contact" className="text-blue-100/70 hover:text-primary transition-colors">Contact</Link></li>
+                <li><Link href="/#faq" className="text-blue-100/70 hover:text-primary transition-colors">FAQ</Link></li>
               </ul>
             </div>
+            
 
-            {/* Contact Info */}
+            {/* Services */}
             <div>
-              <h3 className="text-lg font-bold text-white mb-6 relative before:content-[''] before:absolute before:w-10 before:h-1 before:bg-primary before:-bottom-2">
-                Get In Touch
-              </h3>
-              
-              <ul className="space-y-4">
-                <li>
-                  <a 
-                    href="mailto:Naveencandc4689@gmail.com" 
-                    className="text-blue-100/70 hover:text-primary transition-colors flex items-start"
-                  >
-                    <FaEnvelope className="mr-3 mt-1 text-primary" />
-                    <span>Naveencandc4689@gmail.com</span>
-                  </a>
-                </li>
-                <li>
-                  <a 
-                    href="tel:+918121525235" 
-                    className="text-blue-100/70 hover:text-primary transition-colors flex items-start"
-                  >
-                    <FaPhone className="mr-3 mt-1 text-primary" />
-                    <span>+91 8121525235</span>
-                  </a>
-                </li>
-                <li className="flex items-start">
-                  <FaMapMarkerAlt className="mr-3 mt-1 text-primary flex-shrink-0" />
-                  <a 
-                    href="https://www.google.com/maps?q=16.222400,80.517117" 
-                    className="text-blue-100/70 hover:text-primary transition-colors"
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                  >
-                    <span>Guntur, Andhra Pradesh, India</span>
-                  </a>
-                </li>
+              <h3 className="text-lg font-semibold text-white mb-4">Our Services</h3>
+              <ul className="space-y-2">
+                <li><Link href="/vendor#dj" className="text-blue-100/70 hover:text-primary transition-colors">DJ Services in Guntur</Link></li>
+                <li><Link href="/vendor#lighting" className="text-blue-100/70 hover:text-primary transition-colors">Lighting Solutions</Link></li>
+                <li><Link href="/vendor#photos" className="text-blue-100/70 hover:text-primary transition-colors">Photography</Link></li>
+                <li><Link href="/vendor#smoke" className="text-blue-100/70 hover:text-primary transition-colors">Smoke Effects</Link></li>
+                <li><Link href="/vendor#sound" className="text-blue-100/70 hover:text-primary transition-colors">Sound Systems</Link></li>
               </ul>
             </div>
+            
+
+            {/* Newsletter/Contact Prompt */}
+            <div>
+              <h3 className="text-lg font-semibold text-white mb-4">Stay Connected</h3>
+              <p className="text-blue-100/70 mb-4">
+                Get in touch for the best DJ experience in Guntur. Let's make your event unforgettable!
+              </p>
+              <Link href="/contact" className="btn-primary text-sm py-2.5 px-5">
+                Book Best DJ in Guntur
+              </Link>
+            </div>
+            
           </div>
         </div>
         
-        {/* Copyright Bar */}
-        <div className="border-t border-blue-900/30 py-6 relative z-10">
-          <div className="container-custom">
-            <div className="flex flex-col md:flex-row justify-between items-center">
-              <p className="text-blue-100/70 text-sm mb-4 md:mb-0">
-                &copy; {currentYear} Eagle Sounds. All rights reserved. Founded by Tholusuri Naveen.
-              </p>
-              
-              <div className="flex space-x-4">
-                <Link href="/privacy-policy" className="text-blue-100/70 hover:text-primary transition-colors text-sm">
-                  Privacy Policy
-                </Link>
-                <Link href="/terms-of-service" className="text-blue-100/70 hover:text-primary transition-colors text-sm">
-                  Terms of Service
-                </Link>
-              </div>
-            </div>
+        
+        {/* Copyright */}
+        <div className="py-6 border-t border-blue-900/20">
+          <div className="container-custom text-center text-blue-100/60 text-sm">
+            <p>&copy; {currentYear} Eagle Sounds Guntur. All Rights Reserved. Designed by Eagle Sounds.</p>
+            <p className="mt-1">
+              Your Premier Choice for the Best DJ in Guntur, Andhra Pradesh.
+            </p>
           </div>
         </div>
       </div>
 
-      {/* Back to Top Button */}
-      <motion.button 
-        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-        className="bg-primary hover:bg-accent text-white p-3 rounded-full absolute bottom-6 right-6 z-20 shadow-lg"
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.9 }}
-      >
-        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-          <path fillRule="evenodd" d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z" clipRule="evenodd" />
-        </svg>
-      </motion.button>
+      {/* Background Glow */}
+      <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-1/2 h-24 bg-primary/10 rounded-full filter blur-3xl pointer-events-none"></div>
+      
     </footer>
   );
 };
