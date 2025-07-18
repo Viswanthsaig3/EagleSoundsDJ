@@ -9,7 +9,7 @@ import {
   FaMusic, FaLightbulb, FaCamera, FaPeopleCarry, FaUniversity, 
   FaChevronRight, FaHeadphones, FaMicrophone, FaBirthdayCake, 
   FaRing, FaChevronDown, FaStar, FaSmog, FaInstagram, FaYoutube,
-  FaWhatsapp, FaFacebook, FaSprayCan // Added FaSprayCan for Smoke/Fog
+  FaWhatsapp, FaFacebook, FaSprayCan, FaVoteYea, FaCalendarAlt // Added FaSprayCan for Smoke/Fog, FaVoteYea for Political events, FaCalendarAlt for All types of events
 } from 'react-icons/fa';
 import { IoSparkles } from 'react-icons/io5';
 
@@ -46,6 +46,22 @@ const djServices = [
     icon: <FaUniversity className="text-2xl text-primary" />,
     image: '/dj-college.jpg',
     features: ['Trending music', 'College-friendly packages'],
+  },
+  {
+    id: 5,
+    title: 'Political Events',
+    description: 'Professional DJ services for political rallies, campaigns, and government functions with appropriate sound systems.',
+    icon: <FaVoteYea className="text-2xl text-primary" />,
+    image: '/dj-political.jpg',
+    features: ['High-power sound', 'Professional presentation'],
+  },
+  {
+    id: 6,
+    title: 'All Types of Events',
+    description: 'Comprehensive DJ services for any type of event - from private parties to corporate functions and community gatherings.',
+    icon: <FaCalendarAlt className="text-2xl text-primary" />,
+    image: '/dj-all-events.jpg',
+    features: ['Versatile services', 'Custom packages'],
   },
 ];
 

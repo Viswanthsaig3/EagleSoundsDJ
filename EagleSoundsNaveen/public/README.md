@@ -45,7 +45,7 @@ The `placeholders` directory contains placeholder images that are used when actu
 
 ## About Page
 - `about-image.jpg` - Feature image for about page (800x600px)
-- `founder.jpg` - Photo of Tholusuri Naveen (400x400px, square)
+- `founder.jpg` - Photo of Tholuchuri Naveen (400x400px, square)
 - `team1.jpg` - Team member photo (400x400px)
 
 ## Gallery Images

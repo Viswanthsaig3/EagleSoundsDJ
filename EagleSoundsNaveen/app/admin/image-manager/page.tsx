@@ -47,7 +47,7 @@ const ImageManager = () => {
       { category: "Page Specific Images", id: "contact-hero", targetFilename: "contact-hero.jpg", targetPath: "/", dimensions: "1920x1080px (16:9)", purpose: "Contact Page Hero Background" },
       { category: "Page Specific Images", id: "vendor-bg", targetFilename: "vendor-bg.jpg", targetPath: "/", dimensions: "1920x1080px (16:9)", purpose: "Vendor Page Hero Background" },
       { category: "Page Specific Images", id: "about-image", targetFilename: "about-image.jpg", targetPath: "/", dimensions: "800x600px (4:3)", purpose: "Feature image for About page" },
-      { category: "Page Specific Images", id: "founder", targetFilename: "founder.jpg", targetPath: "/", dimensions: "400x400px (1:1)", purpose: "Photo of Tholusuri Naveen (About Page)" },
+      { category: "Page Specific Images", id: "founder", targetFilename: "founder.jpg", targetPath: "/", dimensions: "400x400px (1:1)", purpose: "Photo of Tholuchuri Naveen (About Page)" },
 
       // Team Images
       { category: "Team Images", id: "team1", targetFilename: "team1.jpg", targetPath: "/", dimensions: "400x400px (1:1)", purpose: "Team Member 1 (Founder/CEO)" },
@@ -176,9 +176,9 @@ const ImageManager = () => {
       case "about-image":
         return "A candid photo of the Eagle Sounds team, dressed professionally, setting up equipment at an Indian event. The background shows Indian decor and teamwork in action.";
       case "founder":
-        return "A professional portrait of Tholusuri Naveen, founder of Eagle Sounds, in a smart outfit, with a subtle Indian event background. The expression is confident and approachable.";
+        return "A professional portrait of Tholuchuri Naveen, founder of Eagle Sounds, in a smart outfit, with a subtle Indian event background. The expression is confident and approachable.";
       case "team1":
-        return "A professional portrait of Tholusuri Naveen, founder and CEO of Eagle Sounds, with a confident and friendly expression, set against a subtle Indian event backdrop.";
+        return "A professional portrait of Tholuchuri Naveen, founder and CEO of Eagle Sounds, with a confident and friendly expression, set against a subtle Indian event backdrop.";
       case "testimonial1":
         return "A happy Indian bride in a red saree at her wedding, smiling and enjoying the music, with vibrant lighting and traditional Indian decorations in the background.";
       case "testimonial2":

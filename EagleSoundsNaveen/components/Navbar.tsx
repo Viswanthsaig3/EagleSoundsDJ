@@ -55,7 +55,13 @@ const Navbar = () => {
             transition={{ duration: 0.5 }}
             className="relative h-12 w-auto flex items-center"
           >
-            
+            <Image
+              src="/Eaglesounds.png"
+              alt="Eagle Sounds Logo"
+              width={48}
+              height={48}
+              className="mr-2"
+            />
             <motion.span 
               className="ml-2 font-bold text-xl text-white"
               animate={{ opacity: [0.7, 1, 0.7] }}

@@ -26,28 +26,28 @@ const Footer = () => {
                   <div className="flex items-center">
                     <Image
                       src="/logo.png"
-                      alt="Eagle Sounds Logo Guntur"
+                      alt="Eagle Sounds Logo"
                       width={60}
                       height={60}
                       className="mr-3"
                     />
                     <div>
                       <h2 className="text-xl font-bold text-white">Eagle <span className="text-primary">Sounds</span></h2>
-                      <p className="text-sm text-blue-300">Premium Event Services in Guntur</p>
+                      <p className="text-sm text-blue-300">Premium Event Services</p>
                     </div>
                   </div>
                 </Link>
               </div>
 
               <p className="text-blue-100/70 mb-6">
-                Professional DJ services, lighting solutions, photography, and event management for weddings, parties, corporate events, and more in Guntur. Your best choice for DJ services in Guntur.
+                Professional DJ services, lighting solutions, photography, and event management for weddings, parties, corporate events, and more. Your best choice for DJ services.
               </p>
 
-              <p className="text-white font-medium mb-2">Tholusuri Naveen</p>
+              <p className="text-white font-medium mb-2">Tholuchuri Naveen</p>
               <div className="text-blue-100/70 text-sm">
                 <div className="flex items-start mb-2">
                   <FaMapMarkerAlt className="text-primary mr-2 mt-1 flex-shrink-0" />
-                  <span>Your Business Address, Guntur, Andhra Pradesh, Your Pincode</span>
+                  <span>Your Business Address, Andhra Pradesh, Your Pincode</span>
                 </div>
                 <div className="flex items-center mb-2">
                   <FaPhone className="text-primary mr-2" />
@@ -96,7 +96,7 @@ const Footer = () => {
             <div>
               <h3 className="text-lg font-semibold text-white mb-4">Our Services</h3>
               <ul className="space-y-2">
-                <li><Link href="/vendor#dj" className="text-blue-100/70 hover:text-primary transition-colors">DJ Services in Guntur</Link></li>
+                <li><Link href="/vendor#dj" className="text-blue-100/70 hover:text-primary transition-colors">DJ Services</Link></li>
                 <li><Link href="/vendor#lighting" className="text-blue-100/70 hover:text-primary transition-colors">Lighting Solutions</Link></li>
                 <li><Link href="/vendor#photos" className="text-blue-100/70 hover:text-primary transition-colors">Photography</Link></li>
                 <li><Link href="/vendor#smoke" className="text-blue-100/70 hover:text-primary transition-colors">Smoke Effects</Link></li>
@@ -109,10 +109,10 @@ const Footer = () => {
             <div>
               <h3 className="text-lg font-semibold text-white mb-4">Stay Connected</h3>
               <p className="text-blue-100/70 mb-4">
-                Get in touch for the best DJ experience in Guntur. Let's make your event unforgettable!
+                Get in touch for the best DJ experience. Let's make your event unforgettable!
               </p>
               <Link href="/contact" className="btn-primary text-sm py-2.5 px-5">
-                Book Best DJ in Guntur
+                Book Best DJ
               </Link>
             </div>
             
@@ -123,9 +123,9 @@ const Footer = () => {
         {/* Copyright */}
         <div className="py-6 border-t border-blue-900/20">
           <div className="container-custom text-center text-blue-100/60 text-sm">
-            <p>&copy; {currentYear} Eagle Sounds Guntur. All Rights Reserved. Designed by Eagle Sounds.</p>
+            <p>&copy; {currentYear} Eagle Sounds. All Rights Reserved. Designed by Eagle Sounds.</p>
             <p className="mt-1">
-              Your Premier Choice for the Best DJ in Guntur, Andhra Pradesh.
+              Your Premier Choice for the Best DJ, Andhra Pradesh.
             </p>
           </div>
         </div>
